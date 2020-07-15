@@ -1,0 +1,96 @@
+.header{background:#333;color:#fff;padding:20px;}
+			.header > h1{float:left; font-size:30px; color:#fff}
+			.header .nav{float:right;margin-top:10px;}
+			.header .nav a{color:#fff; margin-left:10px}
+			.header:after{content: '';display: block;clear: both;}/* 클리어 처리 */
+
+			.container{padding:20px}
+			.container .section + .section{margin-top:50px}
+
+			/* 비주얼 애니메이션  */
+			.visual{
+				text-align: center;
+				position: relative;
+				height:200px;
+				background:#3f51b5;
+			}
+			.visual .unit{
+				animation:key_1 5s infinite;
+				opacity: 0;
+				position: absolute;
+				top:80px;
+				left:0;
+				width:100%;
+				color:#fff;
+			}
+			.visual .unit:nth-child(2){
+				animation-name:key_2;
+				opacity: 0;
+			}
+			.visual .unit .txt_tit{
+				font-size: 50px;
+			}
+			.visual .unit .txt_subs_1{
+				font-size:30px;
+				margin:10px 0;
+			}
+
+			@keyframes key_1{
+				0%{opacity:0; top:80px;}
+				10%{opacity:1; top:50px;}
+				40%{opacity:1; top:50px;}
+				50%{opacity:0; top:80px;}
+			}
+			@keyframes key_2{
+				50%{opacity:0; top:80px;}
+				60%{opacity:1; top:50px;}
+				90%{opacity:1; top:50px}
+				100%{opacity:0; top:80px}
+			}
+
+			/* 박스 애니메이션 */
+			.box_group{
+				text-align: center;
+				line-height:300px;
+				background: #eee;
+			}
+			.box_group .box{
+				width:200px;
+				height:100px;
+				background: #999;
+				margin:10px;
+				transition:all .5s;
+				display: inline-block;
+				vertical-align:middle;
+			}
+			.box_group .box:hover{
+				background:#ff0000;
+			}
+
+			/* flex 속성 활용 테이블 */
+			.tb .row{
+				display:flex;
+				border-bottom:1px solid #bbb;
+			}
+			.tb .row:first-child{
+				border-top:1px solid #bbb;
+			}
+
+			.tb .row .label{
+				width:100px;
+				background: #ccc;
+				padding:10px;
+				vertical-align:middle;
+			}
+			.tb .row .content{
+				background:#fff;
+				flex:1;
+				padding:10px;
+				vertical-align:middle;
+			}
+			.tb .row .content > input{
+				width:100%;
+				height:20px;
+				border:1px solid #bbb;
+				border-radius:3px;
+			}
