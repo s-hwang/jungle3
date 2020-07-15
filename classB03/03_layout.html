@@ -8,11 +8,55 @@
 		<style>
 			body, h1{margin:0}
 			a{color:#fff}
+			.wrap{
+				width: 1024px;
+				margin: 0 auto;
+			}
 
 			.header{
 				background:#333;
 				color:#fff;
 				padding:20px;
+			}
+			.container{
+				display: flex;
+				height: 300px;
+			}
+			.container .section{
+				background: cyan;
+				flex:1;
+			}
+			.container .aside{
+				background: darkgreen;
+				width: 200px;
+			}
+			.footer{
+				height: 50px;
+				background: #666;
+			}
+			@media all and (max-width: 1024px){
+				.wrap{
+					width: 640px;
+				}
+				.container .aside{
+					width: 130px;
+				}
+			}
+			@media all and (max-width: 640px){
+				.wrap{
+					width: auto;
+				}
+				.container{
+					display:initial;
+					height: auto;
+				}
+				.container .section{
+					height: 300px;
+				}
+				.container .aside{
+					height: 100px;
+					width: auto;
+				}
 			}
 		</style>
 
