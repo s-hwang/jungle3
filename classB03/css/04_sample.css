@@ -1,8 +1,36 @@
 .header{background:#333;color:#fff;padding:20px;}
-			.header > h1{float:left; font-size:30px; color:#fff}
-			.header .nav{float:right;margin-top:10px;}
-			.header .nav a{color:#fff; margin-left:10px}
-			.header:after{content: '';display: block;clear: both;}/* 클리어 처리 */
+.header > h1{float:left; font-size:30px; color:#fff}
+.header .nav{float:right;margin-top:10px;}
+.header .nav a{color:#fff; margin-left:10px}
+.header:after{content: '';display: block;clear: both;}/* 클리어 처리 */
+
+@media all and (max-width:768px){
+	.header .nav{
+		width: 70px;
+		height: 70px;
+		background: #d7ba7d;
+		float:none;
+		position: absolute;
+		top:0;
+		right:0;
+		margin-top:0;
+	}
+	.header .nav:hover{
+		width: 200px;
+		height: 100vh;
+		z-index: 2;
+	}
+	.header .nav:hover a{
+		display: block;
+		font-size: 20px;
+		line-height: 50px;
+		color:#333;
+	}
+	.header .nav:hover a:hover{
+		text-decoration: underline;
+	}
+	.header .nav a{display:none;}
+}
 
 			.container{padding:20px}
 			.container .section + .section{margin-top:50px}
