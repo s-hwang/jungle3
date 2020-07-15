@@ -62,6 +62,14 @@
 				font-size:30px;
 				margin:10px 0;
 			}
+			@media all and (max-width:768px){
+				.visual .unit .txt_tit{
+					font-size: 40px;
+				}
+				.visual .unit .txt_subs_1{
+					font-size:22px;
+				}
+			}
 
 			@keyframes key_1{
 				0%{opacity:0; top:80px;}
@@ -94,6 +102,16 @@
 			.box_group .box:hover{
 				background:#ff0000;
 			}
+			@media all and (max-width:768px){
+				.box_group{
+					line-height: :1;
+					padding: 20px 0;
+				}
+				.box_group .box{
+					display: block;
+					width:auto;
+				}
+			}
 
 			/* flex 속성 활용 테이블 */
 			.tb .row{
@@ -121,4 +139,20 @@
 				height:20px;
 				border:1px solid #bbb;
 				border-radius:3px;
+			}
+			@media all and (max-width:768px){
+				.tb .row{
+					display: initial;
+				}
+				.tb .row .label{
+					padding: 0;
+					font-size: 16px;
+					background: 0;
+					width: auto;
+					font-weight: bold;
+					margin: 30px 0 10px;
+				}
+				.tb .row .content{
+					padding: 0;
+				}
 			}
