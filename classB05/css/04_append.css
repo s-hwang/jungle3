@@ -25,7 +25,7 @@
 .list{
 	padding:5px;
 }
-.section.list .unit:after{
+.section.list:after{
 	content:'';
 	display: block;
 	clear: both;
